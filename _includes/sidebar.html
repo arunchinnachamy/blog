@@ -1,0 +1,38 @@
+<div class="sidebar">
+    <div class="container">
+    <div class="sidebar-about">
+        <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}">
+        <a href="/">Home</a>
+      </li>
+
+      {% comment %}
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. See readme for usage.
+      {% endcomment %}
+
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+            <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
+              <a href="{{ node.url }}">{{ node.title }}</a>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+<!--      <li class="sidebar-nav-item"><a href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a></li>
+      <li class="sidebar-nav-item"><a href="{{ site.github.repo }}">GitHub project</a></li>
+      <li class="sidebar-nav-item">Currently v{{ site.version }}</li>-->
+    </ul>
+
+    <div class="execphpwidget"><p> My Book on Redis <a href="http://www.amazon.com/gp/product/1782164804/ref=as_li_qf_sp_asin_il?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1782164804&amp;linkCode=as2&amp;tag=installpage-20"><img border="0" style="margin-left:64px;" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=1782164804&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=US&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=installpage-20"></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=installpage-20&amp;l=as2&amp;o=1&amp;a=1782164804" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;"></p></div>
+
+    <!--    <p>&copy; {{ site.time | date: '%Y' }}.Arun Chinnachamy - All rights reserved.</p>-->
+  </div>
+</div>
