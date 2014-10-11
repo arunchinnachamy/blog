@@ -8,7 +8,7 @@ permalink:       /:title
 # Setup
 title:            Experimental Life 
 tagline:          'Home Page of Arun Chinnachamy'
-description:      'I am a chemical Engineer from BITS-Pilani turned into a software developer. Right now, I work as Technology Lead in <a href="http://www.mysmartprice.com" target="_blank">MySmartPrice</a>. This is just a place where I write about the things I work and think.'
+description:      'I am a chemical Engineer from BITS-Pilani. Right now, I work as Technology Lead at <a href="http://www.mysmartprice.com" target="_blank">MySmartPrice</a>. This is just a place where I write about the things I work and think.'
 url:              http://www.arunchinnachamy.com
 
 author:
